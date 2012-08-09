@@ -75,18 +75,18 @@ dds_uint ddsGL_load (const char* filename, DDS_GL_TextureInfo* texture) {
             texture->format = GL_COMPRESSED_RGBA_S3TC_DXT5_EXT;
             texture->internal_format = 4;
             break;
-		case DDS_FOURCC_BC4U:
-			texture->format = GL_COMPRESSED_RED_RGTC1_EXT;
-			texture->internal_format = 1;
-			break;
-		case DDS_FOURCC_BC4S:
-			texture->format = GL_COMPRESSED_SIGNED_RED_RGTC1_EXT;
-			texture->internal_format = 1;
-			break;
-		case DDS_FOURCC_BC5S:
-			texture->format = GL_COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT;
-			texture->internal_format = 2;
-			break;
+        case DDS_FOURCC_BC4U:
+            texture->format = GL_COMPRESSED_RED_RGTC1_EXT;
+            texture->internal_format = 1;
+            break;
+        case DDS_FOURCC_BC4S:
+            texture->format = GL_COMPRESSED_SIGNED_RED_RGTC1_EXT;
+            texture->internal_format = 1;
+            break;
+        case DDS_FOURCC_BC5S:
+            texture->format = GL_COMPRESSED_SIGNED_RED_GREEN_RGTC2_EXT;
+            texture->internal_format = 2;
+            break;
         default:
             dds_free (&textureInfo);
             return DDS_BAD_COMPRESSION;
