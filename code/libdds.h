@@ -100,6 +100,9 @@ extern "C" {
     #define DDS_FOURCC_DXT1 DDS_MAKE_FOURCC('D', 'X', 'T', '1')
     #define DDS_FOURCC_DXT3 DDS_MAKE_FOURCC('D', 'X', 'T', '3')
     #define DDS_FOURCC_DXT5 DDS_MAKE_FOURCC('D', 'X', 'T', '5')
+	#define DDS_FOURCC_BC4U DDS_MAKE_FOURCC('B', 'C', '4', 'U')
+	#define DDS_FOURCC_BC4S DDS_MAKE_FOURCC('B', 'C', '4', 'S')
+	#define DDS_FOURCC_BC5S DDS_MAKE_FOURCC('B', 'C', '5', 'S')
 
     /** Errors */
     #define DDS_OK                  0
@@ -205,7 +208,7 @@ extern "C" {
      */
     DDS_API dds_uint DDS_APIENTRY dds_write (const char* filename,
             const DDSTextureInfo* texinfo);
-    
+
 #ifdef	__cplusplus
 }
 #endif
